@@ -6,5 +6,6 @@
 (env) PS C:\Users\benja\GIT\Django> cd .\studybud\
 (env) PS C:\Users\benja\GIT\Django\studybud> python manage.py runserver
 
+ben / !password!
 '''
 print("hello world!")
