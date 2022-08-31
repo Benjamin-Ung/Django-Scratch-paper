@@ -18,8 +18,7 @@ class Room(models.Model):
     #database can have a null value / form can be blank as well
     #can add room without description 
     description = models.TextField(null = True, blank = True)
-
-    #participants = 
+    participants = models.ManyToManyField(User, related_name = 'participants', blank = True)
 
     #take a time stamp when updated
     updated = models.DateTimeField(auto_now=True)
@@ -42,6 +41,11 @@ class Message(models.Model):
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ['-updated', '-created']
+        
     def __str__(self):
         #only want first 50 char for message preview
         return self.body[0:50]
+
+    
