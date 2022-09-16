@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+#added 'rest_framework' from django rest framework website https://www.django-rest-framework.org/
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'base.apps.BaseConfig'
+    'base.apps.BaseConfig',
+
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
